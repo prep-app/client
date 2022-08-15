@@ -53,13 +53,16 @@ const Login: NextPage = () => {
             </Text>
 
             <form>
-              <FormControl>
+              <FormControl mb="5">
                 <FormLabel> Email</FormLabel>
-                <Input type="email" value={loginForm.email} name="email" onChange={handleLoginChange}></Input>
+                <Input type="email" value={loginForm.email} 
+                variant="flushed"
+                name="email" onChange={handleLoginChange}></Input>
               </FormControl>
               <FormControl>
                 <FormLabel> Password</FormLabel>
-                <Input type="password" name="password" value={loginForm.password} onChange={handleLoginChange}></Input>
+                <Input type="password" name="password" value={loginForm.password} variant="flushed"
+                onChange={handleLoginChange}></Input>
               </FormControl>
             </form>
             <Button

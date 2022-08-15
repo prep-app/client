@@ -16,8 +16,7 @@ const Register: NextPage = () => {
     setRegisterForm((form) => ({ ...form, [e.target.name]: e.target.value }))
   }
 
-  const handleSubmit = () => {
-  }
+  const handleSubmit = () => {}
 
   return (
     <ExternalLayout>
@@ -56,13 +55,13 @@ const Register: NextPage = () => {
             </Text>
 
             <form>
-              <FormControl>
+              <FormControl mb="5">
                 <FormLabel> Email</FormLabel>
-                <Input type="email" value={registerForm.email} name="email" onChange={handleRegisterChange}></Input>
+                <Input type="email" value={registerForm.email} variant="flushed" name="email" onChange={handleRegisterChange}></Input>
               </FormControl>
               <FormControl>
                 <FormLabel> Password</FormLabel>
-                <Input type="password" name="password" value={registerForm.password} onChange={handleRegisterChange}></Input>
+                <Input type="password" name="password" value={registerForm.password} variant="flushed" onChange={handleRegisterChange}></Input>
               </FormControl>
             </form>
             <Button
@@ -74,7 +73,7 @@ const Register: NextPage = () => {
               }}
               onClick={handleSubmit}
             >
-             Sign up
+              Sign up
             </Button>
             <Flex justifyContent="center">
               <Text mr="2">Already have an account?</Text>

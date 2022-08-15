@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react'
 export default function useHeadingsData() {
   const [nestedHeadings, setNestHeadings] = useState<any[]>([])
   useEffect(() => {
-    const headingElements = Array.from(document.querySelectorAll('h2, h3')) as HTMLHeadingElement[];
+    const headingElements = Array.from((document.querySelector('#Article_render') as HTMLElement).querySelectorAll('h2, h3')) as HTMLHeadingElement[];
     const nestedHeadings = getNestedHeadings(headingElements)
     setNestHeadings(nestedHeadings)
   }, [])
