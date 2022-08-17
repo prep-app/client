@@ -1,9 +1,8 @@
 import type { NextPage } from 'next'
-import styles from '../../styles/Home.module.css'
 import Link from 'next/link'
 import { getAllPosts } from '../../utils/mdx'
 import MainLayout from '../../layouts/main'
-import { Box, Center, Container, Flex, Heading, HStack, Text, VStack } from '@chakra-ui/react'
+import { Box, Button, Center, Container, Flex, Heading, HStack, Text, VStack } from '@chakra-ui/react'
 
 interface Posts {
   slug: string
@@ -18,24 +17,25 @@ interface frontmatter {
 const Home: NextPage = ({ posts }: any) => {
   return (
     <MainLayout>
-      <VStack>
-        <Flex minH="80" align="center" justify="center" direction="column">
-            <Heading>Test questesion</Heading>
-            <Text>Pratice and get ready for your coding interviews</Text>
-        </Flex>
-
-        <Container>
+      <Flex backgroundColor="orange.100" minH="80" align="center" justify="center" direction="column">
+        <Heading>Test questesion</Heading>
+        <Text>Pratice and get ready for your coding interviews</Text>
+      </Flex>
+      <Container maxW="container.lg" py="20">
+        <Flex justify="space-between" gap="10">
           {posts.map(({ slug, frontmatter: { title, date } }: Posts, i: number) => (
-            <div key={i} className={styles.card}>
-              <h3>{title}</h3>
-              {date}
-              <br></br>
-
-              <Link href={`/articles/${slug}`}>Read more</Link>
-            </div>
+            <Box width="full" key={i} border="1px" p="2" mb="2" _hover={{ background: 'gray.100' }}>
+              <Heading as="h3" size="md">
+                {title}
+              </Heading>
+              <Text mb="5">{date}</Text>
+              <Link href={`/articles/${slug}`} passHref>
+                <Button variant="link">Read more</Button>
+              </Link>
+            </Box>
           ))}
-        </Container>
-      </VStack>
+        </Flex>
+      </Container>
     </MainLayout>
   )
 }
