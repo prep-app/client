@@ -1,4 +1,4 @@
-import { Box, Container, VStack } from '@chakra-ui/react'
+import { Box } from '@chakra-ui/react'
 import { ReactNode } from 'react'
 import Footer from '../components/footer'
 import Header from '../components/header'
