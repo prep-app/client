@@ -22,16 +22,18 @@ const Home: NextPage = ({ posts }: any) => {
         <Text>Pratice and get ready for your coding interviews</Text>
       </Flex>
       <Container maxW="container.lg" py="20">
-        <Flex justify="space-between" gap="10">
+        <Flex justify="space-between" wrap="wrap" mx="-5">
           {posts.map(({ slug, frontmatter: { title, date } }: Posts, i: number) => (
-            <Box width="full" key={i} border="1px" p="2" mb="2" _hover={{ background: 'gray.100' }}>
-              <Heading as="h3" size="md">
-                {title}
-              </Heading>
-              <Text mb="5">{date}</Text>
-              <Link href={`/articles/${slug}`} passHref>
-                <Button variant="link">Read more</Button>
-              </Link>
+            <Box width={'50%'} key={i} px="5">
+              <Box border="1px" p="2" my="5" _hover={{ background: 'gray.100' }}>
+                <Heading as="h3" size="md">
+                  {title}
+                </Heading>
+                <Text mb="5">{date}</Text>
+                <Link href={`/articles/${slug}`} passHref>
+                  <Button variant="link">Read more</Button>
+                </Link>
+              </Box>
             </Box>
           ))}
         </Flex>
