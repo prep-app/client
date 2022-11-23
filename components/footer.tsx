@@ -43,7 +43,7 @@ export default function Footer() {
           />
         </Flex>
         <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }}>
-          <Text textAlign={useBreakpointValue({ base: 'center', md: 'left' })} fontFamily={'heading'} color={useColorModeValue('gray.800', 'white')}>
+          <Text textAlign={['center', 'left']} fontFamily={'heading'} color={useColorModeValue('gray.800', 'white')}>
             Logo
           </Text>
 
@@ -71,7 +71,7 @@ const DesktopNav = () => {
         <Box key={navItem.label}>
           <Popover trigger={'hover'} placement={'bottom-start'}>
             <PopoverTrigger>
-               {/* INFO: Added span because of a next link error */}
+              {/* INFO: Added span because of a next link error */}
               {/* TODO: remove span element */}
               <span>
                 <NextLink href={navItem.href ?? '#'} passHref>
