@@ -18,8 +18,8 @@ const Home: NextPage = ({ posts }: any) => {
   return (
     <MainLayout>
       <Flex backgroundColor="orange.100" minH="80" align="center" justify="center" direction="column">
-        <Heading>Test questesion</Heading>
-        <Text>Pratice and get ready for your coding interviews</Text>
+        <Heading size={"3xl"} mb={"2"}>Stack</Heading>
+        <Text>Select a stack from our list and get started on your journey</Text>
       </Flex>
       <Container maxW="container.lg" py="20">
         <Flex justify="space-between" wrap="wrap" mx="-5">

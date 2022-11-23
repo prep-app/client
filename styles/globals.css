@@ -1,3 +1,6 @@
+:root{
+  --background-color-primary: #fffbf5;
+}
 html,
 body {
   padding: 0;
