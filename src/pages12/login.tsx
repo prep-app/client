@@ -77,8 +77,8 @@ const Login: NextPage = () => {
             </Button>
             <Flex justifyContent="center">
               <Text mr="2">Don&#39;t have an account?</Text>
-              <NextLink href={'/register'} passHref>
-                <Button display={{ base: 'none', md: 'inline-flex' }} fontSize={'sm'} fontWeight={600} variant="link">
+              <NextLink href={'/register'} >
+                <Button display={{ base: 'none', md: 'inline-flex' }} fontSize={'sm'} fontWeight={600} >
                   Sign Up
                 </Button>
               </NextLink>

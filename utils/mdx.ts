@@ -4,7 +4,7 @@ import matter from 'gray-matter'
 import { bundleMDX } from 'mdx-bundler'
 import rehypeSlug from 'rehype-slug'
 
-export const POST_PATHS = path.join(process.cwd(), 'data/articles')
+export const POST_PATHS = path.join(process.cwd(), 'src/data/articles')
 
 export const getSourceOfFile = (fileName: string) => {
   return fs.readFileSync(path.join(POST_PATHS, fileName), 'utf-8')

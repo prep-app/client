@@ -1,3 +1,5 @@
+"use client"
+
 import { Box } from '@chakra-ui/react'
 import { ReactNode } from 'react'
 import Footer from '../components/footer'
@@ -9,7 +11,7 @@ function MainLayout({ children }: { children: ReactNode }) {
       <Header></Header>
 
       <Box minH={'88vh'}>{children}</Box>
-      <Footer></Footer>
+      {/* <Footer></Footer> */}
     </>
   )
 }

@@ -10,7 +10,7 @@ function ExternalLayout({ children }: { children: ReactNode }) {
 
         {/* </Center> */}
 
-      <Footer></Footer>
+      {/* <Footer></Footer> */}
     </>
   )
 }

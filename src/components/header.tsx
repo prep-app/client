@@ -12,7 +12,6 @@ import {
   PopoverTrigger,
   PopoverContent,
   useColorModeValue,
-  useBreakpointValue,
   useDisclosure,
   Container,
 } from '@chakra-ui/react'
@@ -57,7 +56,7 @@ export default function WithSubnavigation() {
 
           <Stack flex={{ base: 1, md: 0 }} justify={'flex-end'} direction={'row'} spacing={6}>
             <NextLink href={'/login'} passHref>
-              <Button as={'a'} fontSize={'sm'} fontWeight={400} variant={'link'}>
+              <Button fontSize={'sm'} fontWeight={400} variant={'link'}>
                 Sign In
               </Button>
             </NextLink>
