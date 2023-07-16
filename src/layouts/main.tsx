@@ -1,18 +1,12 @@
-"use client"
-
-import { Box } from '@chakra-ui/react'
+import { Header } from '@/components/header'
 import { ReactNode } from 'react'
-import Footer from '../components/footer'
-import Header from '../components/header'
 
 function MainLayout({ children }: { children: ReactNode }) {
   return (
-    <>
+    <div>
       <Header></Header>
-
-      <Box minH={'88vh'}>{children}</Box>
-      {/* <Footer></Footer> */}
-    </>
+      <div className="p-3">{children}</div>
+    </div>
   )
 }
 

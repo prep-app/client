@@ -1,5 +1,5 @@
 import './globals.css'
-import Link from 'next/link'
+import MainLayout from '@/layouts/main'
 
 export const metadata = {
   title: 'Create Next App',
@@ -13,17 +13,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="p-5">
-        <header className="flex border-b-2 border-b-slate-500">
-          <div className="pe-5 py-2 hover:text-red-400">
-            <Link href={'/'}>Home </Link>
-          </div>
-          <div className="pe-5 py-2">
-            <Link href={'/articles'}>Articles </Link>
-          </div>
-        </header>
-
-        {children}
+      <body>
+        <MainLayout>{children}</MainLayout>
       </body>
     </html>
   )
