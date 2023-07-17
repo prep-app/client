@@ -1,18 +1,8 @@
-import { getAllPosts } from '@/utils/mdx'
+import { getStasks } from '@/utils/mdx'
 import Link from 'next/link'
 
-export interface Posts {
-  slug: string
-  frontmatter: frontmatter
-}
-
-interface frontmatter {
-  title: string
-  date: string
-}
-
 export default function page() {
-  const posts = getAllBlogPosts()
+  const posts = getStaskLists()
   return (
     <div>
       <div className="p-10 py-20 bg-purple-200 mb-2">
@@ -21,22 +11,20 @@ export default function page() {
         <p>Cover all the common topics that interviewers love to ask from</p>
       </div>
       <div className="flex justify-between gap-4">
-        {posts.map(
-          ({ slug, frontmatter: { title, date } }: Posts, i: number) => (
-            <div
-              key={i}
-              className="w-full p-5 border border-gray-300 rounded-full"
-            >
-              <Link href={`stack/${title}`}>{title}</Link>
-            </div>
-          )
-        )}
+        {posts.map(({ fileName: title, topics }, i: number) => (
+          <div
+            key={i}
+            className="w-full p-5 border border-gray-300 rounded-full"
+          >
+            <Link href={`stack/${title}/${topics[0].slug}`}>{title}</Link>
+          </div>
+        ))}
       </div>
     </div>
   )
 }
 
-export function getAllBlogPosts() {
-  const posts = getAllPosts() as Posts[]
-  return posts
+export function getStaskLists() {
+  const stask = getStasks()
+  return stask
 }
