@@ -24,7 +24,7 @@ export default function page() {
   )
 }
 
-export function getStaskLists() {
+function getStaskLists() {
   const stask = getStasks()
   return stask
 }

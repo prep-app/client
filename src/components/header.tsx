@@ -25,7 +25,7 @@ export function Header() {
         })}
       </nav>
       <div>
-        <button className="border border-gray-700 hover:bg-purple-400 hover:text-purple-50 hover:border-purple-400 px-7 py-2 rounded-sm">
+        <button className="border border-gray-400 hover:bg-purple-400 hover:text-purple-50 hover:border-purple-400 px-5 py-1 rounded-sm">
           login
         </button>
       </div>
