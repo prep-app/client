@@ -21,7 +21,7 @@ export default function StackModules({ posts }: { posts: Stack[] }) {
             return (
               <p
                 key={i}
-                className={`p-2 ${isActive && 'text-black bg-purple-50'}`}
+                className={`p-2 ${isActive && 'text-purple-600 font-bold bg-purple-50'}`}
               >
                 <Link href={`../${path}`}>{topicTitle}</Link>
               </p>
