@@ -10,6 +10,13 @@ export const getSourceOfFile = (fileName: string) => {
   return fs.readFileSync(path.join(POST_PATHS, fileName), 'utf-8')
 }
 
+export const getStasks = () => {
+  return fs
+    .readdirSync(POST_PATHS, { withFileTypes: true })
+    .filter((file) => file.isDirectory())
+    .map((dir) => dir.name)
+}
+
 export const getAllPosts = () => {
   return fs
     .readdirSync(POST_PATHS)

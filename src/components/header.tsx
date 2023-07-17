@@ -6,7 +6,7 @@ export function Header() {
   const pathName = usePathname()
   return (
     <header className="flex justify-between items-center w-100 border-b border-gray-200 p-3">
-      <div className="pe-7 font-extrabold uppercase">logo</div>
+      <div className="pe-7 font-extrabold uppercase">PREPP</div>
       <nav className="flex items-center">
         {NAV_ITEMS.map(({ label, href }, index) => {
           if (href) {
@@ -14,7 +14,7 @@ export function Header() {
             return (
               <div
                 key={index}
-                className={`pe-5 py-2 hover:text-purple-400 ${
+                className={`pe-5 py-2 hover:text-purple-600 hover:underline ${
                   isActive ? 'text-purple-400' : 'text-black'
                 }`}
               >

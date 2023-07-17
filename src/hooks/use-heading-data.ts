@@ -3,9 +3,16 @@ import { useEffect, useState } from 'react'
 export default function useHeadingsData() {
   const [nestedHeadings, setNestHeadings] = useState<any[]>([])
   useEffect(() => {
-    const headingElements = Array.from((document.querySelector('#Article_render') as HTMLElement).querySelectorAll('h2, h3')) as HTMLHeadingElement[];
-    const nestedHeadings = getNestedHeadings(headingElements)
-    setNestHeadings(nestedHeadings)
+    const articles = document.querySelector('#Article_render')
+    if (window.document && articles) {
+      const headingElements = Array.from(
+        (
+          document.querySelector('#Article_render') as HTMLElement
+        ).querySelectorAll('h2, h3')
+      ) as HTMLHeadingElement[]
+      const nestedHeadings = getNestedHeadings(headingElements)
+      setNestHeadings(nestedHeadings)
+    }
   }, [])
 
   return { nestedHeadings }
@@ -29,5 +36,5 @@ const getNestedHeadings = (headingElements: HTMLHeadingElement[]) => {
       })
     }
   })
-  return nestedHeadings;
+  return nestedHeadings
 }

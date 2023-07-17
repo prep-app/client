@@ -1,6 +1,6 @@
 import type { NextPage } from 'next'
 import Link from 'next/link'
-import { getAllPosts } from '../../../utils/mdx'
+import { getAllPosts } from '../../utils/mdx'
 import MainLayout from '../../layouts/main'
 import {
   Box,
