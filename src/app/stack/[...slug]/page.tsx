@@ -12,7 +12,7 @@ export default function Page({ params }: { params: { slug: string } }) {
       <div className="w-1/5">
         <StackModules posts={stack} />
       </div>
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<div className='w-full'>Loading...</div>}>
         <div className="w-3/5 space-y-8">
           <Article slug={slug}></Article>
           {/* Todo: Make Previous and next button work */}
